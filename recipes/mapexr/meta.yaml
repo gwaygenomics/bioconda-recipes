@@ -1,0 +1,32 @@
+package:
+  name: mapexr 
+  version: 0.1.0
+
+build:
+  number: 0
+
+source:
+  fn: bmannakee-mapexr-da36687d4585.zip
+  url: https://bitbucket.org/bmannakee/mapexr/get/da36687d4585.zip
+  sha256: 0e480ffe66dd2da30314cbdc336bdd729ad707c45a19ab0a88613f5d9d68664e 
+  
+requirements:
+  build:
+    - gcc 
+    - r-base
+  run:
+    - r-tidyverse ==1.1.1
+    - bioconductor-rsamtools
+    - bioconductor-genomicranges
+    - bioconductor-genomicalignments
+    - r-rmarkdown ==1.6
+    - blast
+
+test:
+  commands:
+   - $R -e "library('mapexr')"
+
+about:
+  home: https://bitbucket.org/bmannakee/mapexr
+  license: MIT
+  summary: Deconvolute mouse/human variants from sequencing PDX models
