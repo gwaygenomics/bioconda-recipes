@@ -14,11 +14,11 @@ requirements:
   build:
     - gcc 
     - r-base
-  run:
     - r-tidyverse ==1.1.1
     - bioconductor-rsamtools
     - bioconductor-genomicranges
     - bioconductor-genomicalignments
+  run:
     - r-rmarkdown ==1.6
     - blast
 
